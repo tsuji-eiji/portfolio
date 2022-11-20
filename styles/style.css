@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+/* 共通 */
+* {
+	/* 枠線・うち余白を込みで計算*/
+	box-sizing: border-box;
+}
+
+html {
+	/* 基準フォントサイズを16px */
+	font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.btn {
+  border: 1px solid black;
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.base-color {
+  background-color: #f8f9fa;
+}
+
+.sub-color {
+  background-color: #343a3f;
+}
+
+.text-black {
+  color: #343a40;
+}
+
+#page-title {
+  display: none;
+}
+
+/* ヘッダー */
+header {
+  display: block;
+  text-align: center;
+  font-size: 36px;
+}
+
+header h1 {
+  padding: .8rem 0;
+}
+
+/* ナビゲーション */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+nav ul li {
+  font-size: 1.2rem;
+  width: 25%;
+}
+
+nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: .5rem 0;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Home */
+.home-card {
+  margin: 12rem 1rem;
+  padding: 1rem;
+}
+
+.home-headline {
+  text-align: center;
+}
+
+.home-headline h2 {
+  font-size: 1.5rem;
+}
+
+.home-headline h3 {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.home-prof-text h4 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.home-prof-text p {
+  padding: 1rem;
+  margin: 0 1rem;
+}
+
+#home-prof-img img {
+  margin: 0 auto 1rem;
+  display: block;
+  max-width: 50%;
+  height: auto;
+  border-radius:50%;
+}
+
+.skill-card {
+  text-align: center;
+  padding: 2rem 4rem;
+}
+
+.skill-card p {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+/* Blog */
+.blog-card {
+  margin: 1rem;
+  border: 1px solid #343a3f;
+}
+
+#eyecatch {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.blog-card-dateline {
+  display: flex;
+  justify-content: space-evenly;
+  margin: .5rem 0 0;
+  /* font-size: .8rem; */
+}
+
+.blog-card h3 {
+  text-align: center;
+  margin: 1rem;
+  font-size: 1.4rem;
+}
+
+/* article */
+.article-wrapper #eyecatch {
+  margin: 1rem 0;
+}
+
+#article-title {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.8rem;
+}
+
+#article-date-line {
+  text-align: right;
+}
+
+#article-date-line #article-date {
+  margin-right: 1rem;
+}
+
+#article-btn-line {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+#article-btn-line button {
+  border: 1px solid #343a3f;
+  margin: 2rem 0;
+}
+
+#article-btn-line button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: .5rem 2rem;
+}
+
+/* Works */
+.work-card {
+  margin: 2rem 0;;
+}
+
+.work-card h3 {
+  margin: 1rem 0;;
+}
+
+/* Mail */
+.mail-wrapper h3 {
+  margin: 3rem 0;
+}
+
+.mail-form ul {
+  margin-bottom: 3rem;
+}
+
+.mail-form ul li input {
+  padding: .3rem;
+}
+
+.mail-form ul li input,
+.mail-form ul li textarea {
+  width: 100%;
+  border: 1px solid black;
+  background-color: white;
+  margin-bottom: 2rem;
+}
+
+.mail-wrapper {
+  display: flex;
+}
+
+.mail-empty {
+  height: 5rem;
+}
+
+/* PC用 */
+@media (min-width: 600px) {
+  /* 共通 */
+  #page-title {
+    display: block;
+    margin: 2rem 5rem;
+    font-size: 3rem;
+  }
+
+  .btn:hover {
+    background-color: #343a3f;
+    color: white;
+  }
+
+  /* ヘッダー */
+  header h1 {
+    text-align: left;
+    font-size: 5rem;
+    padding: 3rem 0;
+    padding-left: 10%;
+  }
+
+  /* ナビゲーション */
+  nav ul {
+    justify-content: flex-end;
+    padding: .5rem 0;
+  }
+
+  nav ul li {
+    width: auto;
+    font-size: 3rem;
+  }
+
+  nav ul li a {
+    display: inline;
+    width: auto;
+    margin: 0 2rem;
+    padding: 1rem 0;
+  }
+
+  /* フッター */
+  footer {
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.5rem;
+    background: gray;
+  }
+
+  /* Home */
+  #prof-content {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  #home-prof-img {
+    width: 30%;
+    margin: 0;
+  }
+
+  .home-card {
+    margin: 24rem 1rem;
+    padding: 1rem;
+  }
+
+  .home-headline h2 {
+    font-size: 3rem;
+  }
+  
+  .home-headline h3 {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .home-prof-text {
+    width: 30%;
+  }
+
+  .home-prof-text h4 {
+    font-size: 2rem;
+  }
+
+  #skill-line {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* Blog */
+  .blog-wrapper {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+
+  /* article */
+  .article-wrapper {
+    margin: 0 12rem;
+  }
+
+  #article-btn-line button a {
+    padding: 1rem 5rem;
+  }
+
+  #article-btn-line button:hover {
+    background-color: #343a3f;
+    color: white;
+  }
+
+  /* works */
+  .work-wrapper {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 4rem;
+  }
+
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .work-card h3 {
+    margin: 0;
+  }
+
+  /* Mail */
+  .mail-form {
+    display: flex;
+  }
+
+  .mail-form form {
+    width: 30%;
+    margin-bottom: 16rem;
+  } 
+
+  .mail-empty {
+    width: 70%;
+  } 
+
+}
