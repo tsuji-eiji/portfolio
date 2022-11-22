@@ -18,7 +18,7 @@ body {
 .btn {
   border: 1px solid black;
   width: 100%;
-  height: 2rem;
+  height: 3.5rem;
   text-align: center;
 }
 
@@ -199,7 +199,7 @@ footer {
 
 /* Mail */
 .mail-wrapper h3 {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .mail-form ul {
@@ -218,12 +218,24 @@ footer {
   margin-bottom: 2rem;
 }
 
-.mail-wrapper {
-  display: flex;
-}
-
 .mail-empty {
   height: 5rem;
+}
+
+/* confirm */
+.confirm-form {
+  min-height: 100vh;
+}
+
+.confirm-form form ul li span {
+  display: block;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+#confirm-submit,
+#confirm-back {
+  margin-top: 3rem;
 }
 
 /* PC用 */
@@ -235,6 +247,10 @@ footer {
     font-size: 3rem;
   }
 
+  .btn {
+    height: 2rem;
+  }
+
   .btn:hover {
     background-color: #343a3f;
     color: white;
@@ -244,7 +260,7 @@ footer {
   header h1 {
     text-align: left;
     font-size: 5rem;
-    padding: 3rem 0;
+    padding: 1rem 0;
     padding-left: 10%;
   }
 
@@ -269,7 +285,7 @@ footer {
   /* フッター */
   footer {
     text-align: center;
-    padding: 3rem 0;
+    padding: 2rem 0;
     font-size: 1.5rem;
     background: gray;
   }
@@ -360,12 +376,39 @@ footer {
   }
 
   .mail-form form {
-    width: 30%;
+    width: 50%;
     margin-bottom: 16rem;
   } 
 
   .mail-empty {
-    width: 70%;
+    width: 50%;
   } 
 
+  .mail-wrapper {
+    margin-left: 5rem;
+    min-height: 100vh;
+  }
+  /* confirm */
+  .confirm-form {
+    display: flex;
+  }
+
+  .confirm-form form {
+    width: 40%;
+  }
+
+  .confirm-empty {
+    width: 60%;
+  }
+
+  .confirm-btn-line {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #confirm-submit,
+  #confirm-back {
+    width: 45%;
+    margin: 4rem auto;
+  }
 }
