@@ -153,13 +153,9 @@ footer {
 }
 
 /* article */
-.article-wrapper #eyecatch {
-  margin: 1rem 0;
-}
-
 #article-title {
   text-align: center;
-  margin: 2rem;
+  margin: 5rem;
   font-size: 1.8rem;
 }
 

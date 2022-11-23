@@ -15,7 +15,7 @@ export default function Blog({ blog }) {
           <span id='article-date'>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</span>
           <span id='article-category'>{blog.category.name}</span>
         </p>
-        <Image src={blog.eyecatch.url} alt="" width={240} height={126} onError={() => setState({ src: 'img/noimage.png'})} id="eyecatch" />
+        {/* <Image src={blog.category.image.url} alt="" width={480} height={252} onError={() => setState({ src: 'img/noimage.png'})} id="article-eyecatch" /> */}
         <div
           dangerouslySetInnerHTML={{
             __html: `${blog.content}`,
