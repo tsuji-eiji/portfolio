@@ -9,6 +9,22 @@ export default function Confirm() {
   const [email, setEmail] = useState(router.query.email);
   const [subject, setSubject] = useState(router.query.subject);
   const [content, setContent] = useState(router.query.content);
+  const [isFirst, setIsFirst] = useState(true);
+
+  // フォーム回答後はリダイレクトさせる
+  const redirect = () => {
+    // 初回表示時はリダイレクトさせない
+    if (isFirst) {
+      setIsFirst(false);
+      return;
+    }
+
+    router.push({
+      // リダイレクト先のページ
+      pathname: `/complete`,
+    });
+  };
+  
 
   return (
     <>

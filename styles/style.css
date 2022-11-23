@@ -238,6 +238,14 @@ footer {
   margin-top: 3rem;
 }
 
+/* complete */
+.complete-msg {
+  /* min-height: 60vh; */
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 40vh auto;
+}
+
 /* PC用 */
 @media (min-width: 600px) {
   /* 共通 */

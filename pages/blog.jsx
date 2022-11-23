@@ -14,7 +14,7 @@ export default function Blog({ blogs }) {
         <div className='blog-wrapper'>
         {blogs.map((blog) => (
           <div key={blog.id} className='blog-card'>
-            <Image src={blog.eyecatch.url} alt="" width={240} height={126} onError={() => setState({ src: 'img/noimage.png'})} id="eyecatch" />
+            <Image src={blog.category.image.url} alt="" width={480} height={252} onError={() => setState({ src: 'img/noimage.png'})} id="eyecatch" />
             <div className='blog-card-dateline'>
               <p>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</p>
               <p>{blog.category.name}</p>
