@@ -3,7 +3,7 @@ import Meta from '../../compornents/meta';
 import {client} from '../../libs/client';
 import {parseISO, format} from 'date-fns';
 import ja from 'date-fns/locale/ja';
-import Link from 'next/link';
+import Router from 'next/router';
 
 export default function Blog({ blog }) {
   return (
@@ -15,15 +15,14 @@ export default function Blog({ blog }) {
           <span id='article-date'>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</span>
           <span id='article-category'>{blog.category.name}</span>
         </p>
-        {/* <Image src={blog.category.image.url} alt="" width={480} height={252} onError={() => setState({ src: 'img/noimage.png'})} id="article-eyecatch" /> */}
         <div
           dangerouslySetInnerHTML={{
             __html: `${blog.content}`,
           }}
         />
         <div id='article-btn-line'>
-          <button>
-            <Link href={'/blog'}>戻る</Link>
+          <button className='btn' onClick={() => Router.back()}>
+            戻る
           </button>
         </div>
       </div>

@@ -175,6 +175,7 @@ footer {
 #article-btn-line button {
   border: 1px solid #343a3f;
   margin: 2rem 0;
+  padding: 0 10rem;
 }
 
 #article-btn-line button a {
@@ -346,14 +347,14 @@ footer {
     margin: 0 12rem;
   }
 
-  #article-btn-line button a {
-    padding: 1rem 5rem;
-  }
+  /* #article-btn-line button {
+    padding: 0 10rem;
+  } */
 
-  #article-btn-line button:hover {
+  /* #article-btn-line button:hover {
     background-color: #343a3f;
     color: white;
-  }
+  } */
 
   /* works */
   .work-wrapper {
