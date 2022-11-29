@@ -53,6 +53,7 @@ header {
   display: block;
   text-align: center;
   font-size: 36px;
+  color: #f8f9fa;
 }
 
 header h1 {
@@ -171,6 +172,10 @@ footer {
   margin-right: 1rem;
 }
 
+.article-wrapper {
+  margin: 0 1.5rem;
+}
+
 #article-content pre {
   margin: 1rem 0; /* ブロック前後の余白 */
   padding: 1rem; /* ブロック内の余白 */
@@ -190,7 +195,6 @@ footer {
 #article-btn-line button {
   border: 1px solid #343a3f;
   margin: 2rem 0;
-  padding: 0 10rem;
 }
 
 #article-btn-line button a {
@@ -201,15 +205,23 @@ footer {
 }
 
 /* Works */
+.work-wrapper {
+  margin: 0 1.5rem;
+}
+
 .work-card {
-  margin: 2rem 0;;
+  margin: 2rem 0;
 }
 
 .work-card h3 {
-  margin: 1rem 0;;
+  margin: 1rem 0;
 }
 
 /* Mail */
+.mail-wrapper {
+  margin: 0 1.5rem;
+}
+
 .mail-wrapper h3 {
   margin: 2rem 0;
 }
@@ -268,6 +280,7 @@ footer {
   }
 
   .btn {
+    width: auto;
     height: 2rem;
   }
 
