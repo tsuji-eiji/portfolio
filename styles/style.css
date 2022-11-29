@@ -155,7 +155,7 @@ footer {
 /* article */
 #article-title {
   text-align: center;
-  margin: 5rem;
+  margin: 5rem 1rem;
   font-size: 1.8rem;
 }
 
@@ -165,6 +165,17 @@ footer {
 
 #article-date-line #article-date {
   margin-right: 1rem;
+}
+
+#article-content pre {
+  margin: 1rem 0; /* ブロック前後の余白 */
+  padding: 1rem; /* ブロック内の余白 */
+  border-radius: 5px;
+  white-space: pre-wrap;
+  background: #25292f;
+  color: #fff;
+  overflow-x: auto; /* ⭐ */
+  -webkit-overflow-scrolling: touch; /* ⭐ */
 }
 
 #article-btn-line {
@@ -346,15 +357,6 @@ footer {
   .article-wrapper {
     margin: 0 12rem;
   }
-
-  /* #article-btn-line button {
-    padding: 0 10rem;
-  } */
-
-  /* #article-btn-line button:hover {
-    background-color: #343a3f;
-    color: white;
-  } */
 
   /* works */
   .work-wrapper {

@@ -15,7 +15,7 @@ export default function Blog({ blog }) {
           <span id='article-date'>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</span>
           <span id='article-category'>{blog.category.name}</span>
         </p>
-        <div
+        <article id='article-content'
           dangerouslySetInnerHTML={{
             __html: `${blog.content}`,
           }}
