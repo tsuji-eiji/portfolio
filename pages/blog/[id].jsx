@@ -9,7 +9,7 @@ export default function Blog({ blog }) {
   return (
     <>
       <Meta title={blog.title}/>
-      <div id='wrapper' className='article-wrapper'>
+      <div className='article-wrapper'>
         <h2 id='article-title'>{blog.title}</h2>
         <p id='article-date-line'>
           <span id='article-date'>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</span>

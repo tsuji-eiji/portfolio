@@ -9,7 +9,7 @@ export default function Blog({ blogs }) {
   return (
     <>
       <Meta title='Blog'/>
-      <div id='wrapper'>
+      <div>
       <h2 id='page-title'>Blog</h2>
         <div className='blog-wrapper'>
         {blogs.map((blog) => (

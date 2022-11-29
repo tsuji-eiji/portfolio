@@ -22,10 +22,14 @@ body {
   text-align: center;
 }
 
-#wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  min-height: 100vh;
+}
+
+.wrapper main {
+  flex: 1;
 }
 
 .base-color {
@@ -349,7 +353,7 @@ footer {
   .blog-wrapper {
     display: grid;
     gap: 26px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 2rem;
   }
 

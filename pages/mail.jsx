@@ -27,8 +27,11 @@ export default function Mail() {
   return (
     <>
       <Meta title='Mail'/>
-      <div id='wrapper' className='mail-wrapper'>
-      <h3>各種お問い合わせ等は以下のメールフォームをご利用ください。</h3>
+      <div className='mail-wrapper'>
+      <h3>
+        各種お問い合わせは以下のフォームをご利用ください。<br />
+        ※このフォームはGoogle Formを利用しています。
+      </h3>
         <div className='mail-form'>
           <form onSubmit={submit}>
             <ul>

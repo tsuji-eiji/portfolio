@@ -29,7 +29,7 @@ export default function Confirm() {
   return (
     <>
       <Meta title='Confirm'/>
-      <div id='wrapper' className='mail-wrapper'>
+      <div className='mail-wrapper'>
       <h3>入力内容をご確認ください。</h3>
         <div className='confirm-form'>
           <form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse" className="autoConfirm">

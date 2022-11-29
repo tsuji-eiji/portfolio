@@ -7,7 +7,7 @@ export default function Works({works}) {
   return (
     <>
       <Meta title='Works'/>
-      <div id='wrapper'>
+      <div>
         <h2 id='page-title'>Works</h2>
         <div className='work-wrapper'>
           {works.map((work) => (

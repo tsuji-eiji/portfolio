@@ -5,7 +5,7 @@ export default function Complete() {
   return (
     <>
       <Meta title='Complete'/>
-      <div id='wrapper'>
+      <div>
         <h4 className='complete-msg'>
           お問い合わせ内容が送信されました。<br />
           ありがとうございました。

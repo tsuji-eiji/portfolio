@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Meta title='Home'/>
-      <div id='wrapper'>
+      <div>
         <div className='home-headline home-card'>
           <h2>About this site</h2>
           <h3>このサイトについて</h3>
