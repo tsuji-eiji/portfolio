@@ -8,7 +8,6 @@ export default function Works({works}) {
     <>
       <Meta title='Works'/>
       <div>
-        <h2 id='page-title'>Works</h2>
         <div className='work-wrapper'>
           {works.map((work) => (
           <div key={work.id} className='work-card'>

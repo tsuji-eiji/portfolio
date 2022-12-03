@@ -1,18 +1,39 @@
 import Image from 'next/image';
-import Meta from '../compornents/meta';
-import {client} from '../libs/client';
+import Meta from '../../compornents/meta';
+import {client} from '../../libs/client';
 import {parseISO, format} from 'date-fns';
 import ja from 'date-fns/locale/ja';
 import Link from 'next/link';
 
-const query = {
-  name: "yakkun",
-};
-
-export default function Blog({ blogs, categories }) {
+export default function CategoryId({ blogs, categories }) {
+  // カテゴリーに紐付いたコンテンツがない場合に表示
+  if (blogs.length === 0) {
+    return (
+      <>
+        <Meta title='ブログエントリーがありません'/>
+        <div className='blog-wrapper'>
+          <div className='blog-article'>
+            ブログエントリーがありません
+          </div>
+          <div className='blog-categories'>
+            <h3>カテゴリ</h3>
+            <ul>
+              {categories.map((category) => (
+                <li key={category.name}>
+                  <Link href={`/category/${category.id}`}>
+                    {category.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </>
+    );
+  }
   return (
     <>
-      <Meta title='Blog'/>
+      <Meta title={blogs[0].category.name}/>
       <div className='blog-wrapper'>
         <div className='blog-article'>
         {blogs.map((blog) => (
@@ -42,13 +63,22 @@ export default function Blog({ blogs, categories }) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
+// 静的生成のためのパスを指定します
+export const getStaticPaths = async () => {
+  const data = await client.get({ endpoint: "categories" });
+  const paths = data.contents.map((content) => `/category/${content.id}`);
+  return { paths, fallback: false };
+};
+
 // データをテンプレートに受け渡す部分の処理を記述します
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "blogs" });
+export const getStaticProps = async (context) => {
+  const id = context.params.id;
+  const data = await client.get({ endpoint: "blogs", queries: { filters: `category[equals]${id}` } });
   const categoryData = await client.get({ endpoint: "categories" });
+  
   return {
     props: {
       blogs: data.contents,
