@@ -15,7 +15,7 @@ export default function CategoryId({ blogs, categories }) {
           <div className='blog-article'>
             ブログエントリーがありません
           </div>
-          <div className='blog-categories'>
+          <div className='blog-search'>
             <h3>カテゴリ</h3>
             <ul>
               {categories.map((category) => (
@@ -49,7 +49,7 @@ export default function CategoryId({ blogs, categories }) {
           </div>
           ))}
         </div>
-        <div className='blog-categories'>
+        <div className='blog-search'>
           <h3>カテゴリ</h3>
           <ul>
             {categories.map((category) => (
