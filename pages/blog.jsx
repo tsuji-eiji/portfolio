@@ -10,21 +10,19 @@ export default function Blog({ blogs, categories }) {
     <>
       <Meta title='Blog'/>
       <div className='blog-wrapper'>
-        <div className='blog-article-wrapper'>
-          <div className='blog-article'>
-            {blogs.map((blog) => (
-              <div key={blog.id} className='blog-card'>
-                <Link href={`/blog/${blog.id}`}>
-                  <Image src={blog.category.image.url} alt="" width={480} height={252} onError={() => setState({ src: 'img/noimage.png'})} id="eyecatch" />
-                  <div className='blog-card-dateline'>
-                    <p>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</p>
-                    <p>{blog.category.name}</p>
-                  </div>
-                  <h3>{blog.title}</h3>
-                </Link>
-              </div>
-            ))}
-          </div>
+        <div className='blog-article'>
+          {blogs.map((blog) => (
+            <div key={blog.id} className='blog-card'>
+              <Link href={`/blog/${blog.id}`}>
+                <Image src={blog.category.image.url} alt="" width={480} height={252} onError={() => setState({ src: 'img/noimage.png'})} id="eyecatch" />
+                <div className='blog-card-dateline'>
+                  <p>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</p>
+                  <p>{blog.category.name}</p>
+                </div>
+                <h3>{blog.title}</h3>
+              </Link>
+            </div>
+          ))}
         </div>
         <div className='blog-search'>
           <h3>カテゴリ</h3>

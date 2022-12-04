@@ -413,6 +413,7 @@ footer {
     gap: 26px;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 2rem;
+    width: 80%;
   }
 
   .blog-search {
