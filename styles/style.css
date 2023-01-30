@@ -224,6 +224,11 @@ footer {
   -webkit-overflow-scrolling: touch; /* ⭐ */
 }
 
+#article-content img {
+  max-width: 100%;
+  height: auto;
+}
+
 #article-btn-line {
   text-align: center;
   margin: 2rem auto;
@@ -432,11 +437,6 @@ footer {
 
   .article-wrapper .btn {
     width: 8rem;
-  }
-
-  #article-content img {
-    max-width: 100%;
-    height: auto;
   }
 
   /* works */
