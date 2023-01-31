@@ -197,12 +197,13 @@ footer {
 /* article */
 #article-title {
   text-align: center;
-  margin: 5rem 1rem;
+  margin: 4rem 1rem;
   font-size: 1.8rem;
 }
 
 #article-date-line {
   text-align: right;
+  padding: 2rem 0;
 }
 
 #article-date-line #article-date {
