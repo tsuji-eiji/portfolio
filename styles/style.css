@@ -230,6 +230,10 @@ footer {
   height: auto;
 }
 
+#article-content a {
+  word-break: break-all;
+}
+
 #article-btn-line {
   text-align: center;
   margin: 2rem auto;
