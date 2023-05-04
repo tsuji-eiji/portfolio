@@ -16,11 +16,12 @@ export default async function Blog() {
       <ul className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {contents.map((blog) => {
           const img = "/img/blog/" + blog.category + ".png";
+          console.log(img);
           return (
             <li key={blog.id} className="border border-gray-400 mx-10">
               <Image
-                src={"/img/blog/" + blog.category[0] + ".png"}
-                alt={"/img/blog/" + blog.category[0] + ".png"}
+                src={img}
+                alt={blog.category}
                 width={300}
                 height={300}
                 className="m-auto w-full h-auto"
