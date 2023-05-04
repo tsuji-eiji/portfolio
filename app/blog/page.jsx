@@ -27,7 +27,10 @@ export default async function Blog() {
                 className="m-auto w-full h-auto"
               />
               <Link className="block" href={`/blog/${blog.id}`}>
-                <p>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</p>
+                <div className="flex justify-between mx-8">
+                  <p>{blog.category}</p>
+                  <p>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</p>
+                </div>
                 <p className="block p-2">{blog.title}</p>
               </Link>
             </li>
