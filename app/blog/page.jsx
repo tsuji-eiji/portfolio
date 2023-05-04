@@ -19,8 +19,8 @@ export default async function Blog() {
           return (
             <li key={blog.id} className="border border-gray-400 mx-10">
               <Image
-                src={"/img/blog/" + blog.category + ".png"}
-                alt={"/img/blog/" + blog.category + ".png"}
+                src={"/img/blog/" + blog.category[0] + ".png"}
+                alt={"/img/blog/" + blog.category[0] + ".png"}
                 width={300}
                 height={300}
                 className="m-auto w-full h-auto"
