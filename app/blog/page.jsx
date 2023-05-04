@@ -20,7 +20,7 @@ export default async function Blog() {
             <li key={blog.id} className="border border-gray-400 mx-10">
               <Image
                 src={img}
-                alt="プロフィール画像"
+                alt={blog.title}
                 width={300}
                 height={300}
                 className="m-auto w-full h-auto"
