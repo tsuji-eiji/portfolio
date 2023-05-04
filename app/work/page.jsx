@@ -14,7 +14,7 @@ export default async function Work() {
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4 my-4">
         {contents.map((work) => {
           return (
-            <li className="block m-4 p-8 bg-gray-200">
+            <li key={work.id} className="block m-4 p-8 bg-gray-200">
               <Image
                 src={work.img.url}
                 alt={work.text}
