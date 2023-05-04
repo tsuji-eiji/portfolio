@@ -8,6 +8,7 @@ export default async function Work() {
   if (!contents || contents.length === 0) {
     return <h2>No contents</h2>;
   }
+  console.log(contents);
 
   return (
     <div>
@@ -20,7 +21,7 @@ export default async function Work() {
                 alt={work.text}
                 width={900}
                 height={450}
-                id="eyecatch"
+                id={work.id}
               />
               <p className="my-8">{work.text}</p>
               <div className="border border-black text-center bg-white">
