@@ -15,12 +15,12 @@ export default async function Blog() {
     <div className="my-4">
       <ul className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {contents.map((blog) => {
-          const img = "/img/blog/" + blog.category + ".PNG";
+          const img = "/img/blog/" + blog.category + ".png";
           return (
             <li key={blog.id} className="border border-gray-400 mx-10">
               <Image
-                src={img}
-                alt={blog.title}
+                src={"/img/blog/" + blog.category + ".png"}
+                alt={"/img/blog/" + blog.category + ".png"}
                 width={300}
                 height={300}
                 className="m-auto w-full h-auto"
