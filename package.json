@@ -12,6 +12,7 @@
     "@next/font": "^13.3.1",
     "@sendgrid/mail": "^7.7.0",
     "date-fns": "^2.29.3",
+    "eslint-config-react-app": "^7.0.1",
     "html-react-parser": "^3.0.16",
     "microcms-js-sdk": "^2.3.1",
     "next": "^13.3.1",
