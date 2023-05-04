@@ -17,15 +17,17 @@ export default async function Work() {
           return (
             <li key={work.id} className="block m-4 p-8 bg-gray-200">
               <Image
+                key={work.id}
                 src={work.img.url}
                 alt={work.text}
                 width={900}
                 height={450}
                 id={work.id}
               />
-              <p className="my-8">{work.text}</p>
-              <div className="border border-black text-center bg-white">
+              <p key={work.id} className="my-8">{work.text}</p>
+              <div key={work.id} className="border border-black text-center bg-white">
                 <Link
+                  key={work.id}
                   href={work.url}
                   target="_blank"
                   className="block w-full"
