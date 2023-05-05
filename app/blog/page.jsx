@@ -15,7 +15,7 @@ export default async function Blog() {
     <div className="my-4">
       <ul className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {contents.map((blog) => {
-          const img = "/img/blog/" + blog.category[0] + ".png";
+          const img = "/img/blog/" + blog.category + ".png";
           return (
             <li key={blog.id} className="border border-gray-400 mx-10">
               <Image
