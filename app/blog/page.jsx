@@ -11,6 +11,7 @@ export default async function Blog() {
     return <h2>No contents</h2>;
   }
 
+  console.log(contents);
   return (
     <div className="my-4">
       <ul className="grid grid-cols-1 lg:grid-cols-4 gap-8">
