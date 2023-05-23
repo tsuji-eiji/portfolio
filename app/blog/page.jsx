@@ -16,6 +16,7 @@ export default async function Blog() {
       {contents.map((blog) => {
         const img = "/img/blog/" + blog.category + ".png";
         console.log(blog.category);
+        
         return (
           <li key={blog.id} className="border border-gray-400 m-6">
             <Link className="block" href={`/blog/${blog.id}`}>
