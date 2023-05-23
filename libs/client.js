@@ -28,7 +28,7 @@ export const getDetail = async (contentId, queries) => {
 
   // データの取得が目視しやすいよう明示的に遅延効果を追加
   await new Promise((resolve) => setTimeout(resolve, 3000));
-
+console.log(detailData.id);
   return detailData;
 };
 

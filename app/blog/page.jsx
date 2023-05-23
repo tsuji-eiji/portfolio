@@ -12,11 +12,11 @@ export default async function Blog() {
   }
 
   return (
-    <ul className="my-8 lg:my-24 grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <ul className="my-8 lg:my-12 grid grid-cols-1 lg:grid-cols-4">
       {contents.map((blog) => {
         const img = "/img/blog/" + blog.category + ".png";
         return (
-          <li key={blog.id} className="border border-gray-400 mx-10">
+          <li key={blog.id} className="border border-gray-400 m-6">
             <Link className="block" href={`/blog/${blog.id}`}>
               <Image
                 src={img}
@@ -25,7 +25,7 @@ export default async function Blog() {
                 height={300}
                 className="m-auto w-full h-auto"
               />
-              <p>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</p>
+              <p className="ml-2 mt-2">{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</p>
               <p className="block p-2">{blog.title}</p>
             </Link>
           </li>
