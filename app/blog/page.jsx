@@ -15,6 +15,7 @@ export default async function Blog() {
     <ul className="my-8 lg:my-12 grid grid-cols-1 lg:grid-cols-4">
       {contents.map((blog) => {
         const img = "/img/blog/" + blog.category + ".png";
+        console.log(blog.category);
         return (
           <li key={blog.id} className="border border-gray-400 m-6">
             <Link className="block" href={`/blog/${blog.id}`}>
