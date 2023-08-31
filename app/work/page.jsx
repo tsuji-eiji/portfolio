@@ -8,7 +8,6 @@ export default async function Work() {
   if (!contents || contents.length === 0) {
     return <h2>No contents</h2>;
   }
-  console.log(contents);
 
   return (
     <div>
