@@ -29,7 +29,7 @@ export default async function StaticDetailPage({ params }) {
       <p className="text-right my-4 mr-4">{format(parseISO(post.publishedAt), 'yyyy/MM/dd', {locale:ja})}</p>
       <div className="m-2">{parse(post.content)}</div>
       <div className="text-center my-8">
-        <Link href='/blog' className="text-center">一覧へ戻る</Link>
+        <Link href='/blog' className="text-center back-to-list">一覧へ戻る</Link>
       </div>
     </div>
   );

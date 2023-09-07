@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import "./globals.css";
 import Header from "./Header";
 
@@ -15,12 +16,13 @@ export default function RootLayout({ children }) {
     <html lang="ja">
       <body>
         <Header />
-        <div className="container m-auto">
+        <div className="container mb-auto">
           {children}
         </div>
-        <footer className="text-center bg-gray-800 text-gray-100 py-4">
+        <Footer />
+        {/* <footer className="text-center bg-gray-800 text-gray-100 py-4">
           <h5>© Tsuji Eiji 2023</h5>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );
