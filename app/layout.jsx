@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="ja">
       <body>
         <Header />
-        <div className="container mb-auto">
+        <div className="container mx-auto mb-auto">
           {children}
         </div>
         <Footer />
