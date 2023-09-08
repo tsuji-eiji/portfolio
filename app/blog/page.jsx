@@ -6,10 +6,19 @@ import ja from 'date-fns/locale/ja';
 
 export default async function Blog() {
   const { contents } = await getList();
-
   if (!contents || contents.length === 0) {
     return <h2>No contents</h2>;
   }
+
+  const list = {
+    laravel:'Laravel',
+    php:'PHP',
+    nextjs:'Next.js',
+    react:'React',
+    javascript:'JavaScript',
+    htmlcss:'HTML/CSS',
+    others:'その他'
+  };
 
   return (
     <ul className="my-8 lg:my-12 grid grid-cols-1 lg:grid-cols-4">
@@ -27,7 +36,7 @@ export default async function Blog() {
               />
               <p className="mx-2 mt-2 flex justify-between">
                 <span>{format(parseISO(blog.publishedAt), 'yyyy/MM/dd', {locale:ja})}</span>
-                <span>{blog.category}</span>
+                <span>{list[blog.category]}</span>
               </p>
               <p className="block p-2">{blog.title}</p>
             </Link>
